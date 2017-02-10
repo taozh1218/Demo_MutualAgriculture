@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--名字（键）-->
+    <string-array name="entries">
+        <item>Java</item>
+        <item>Swift</item>
+        <item>C#</item>
+    </string-array>
+    <!--值-->
+    <string-array name="values">
+        <item>Eclipse or as</item>
+        <item>Xcode</item>
+        <item>Visual Studio</item>
+    </string-array>
+</resources>

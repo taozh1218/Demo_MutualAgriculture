@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="@color/white"
+    >
+
+    <!-- 编号和状态 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv_historyOrderItem_id"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:gravity="center"
+            android:text="订单编号"
+            android:textSize="18dp"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/common_arrow_right"
+            />
+
+        <TextView
+            android:id="@+id/tv_historyOrderItem_state"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="订单状态"
+            android:textSize="18dp"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp">
+
+        <ImageView
+            android:id="@+id/img_historyOrderItem_figure"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            />
+        <!--订单简介-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_historyOrderItem_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="总价：10元"
+                />
+            <TextView
+                android:id="@+id/tv_historyOrderItem_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="订单时间：2015/12/25"
+                />
+            <TextView
+                android:id="@+id/tv_historyOrderItem_actor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="农机主：张三"
+                />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

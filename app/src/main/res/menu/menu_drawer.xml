@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_subRequest"
+            android:icon="@android:drawable/ic_menu_camera"
+            android:title="申请收割"/>
+        <item
+            android:id="@+id/nav_orders"
+            android:icon="@android:drawable/ic_menu_gallery"
+            android:title="历史订单"/>
+        <!--<item-->
+            <!--android:id="@+id/nav_slideshow"-->
+            <!--android:icon="@android:drawable/ic_menu_slideshow"-->
+            <!--android:title="Slideshow"/>-->
+        <item
+            android:id="@+id/nav_setting"
+            android:icon="@android:drawable/ic_menu_manage"
+            android:title="设置"/>
+    </group>
+
+    <item android:title="社交">
+        <menu>
+            <item
+                android:id="@+id/nav_share_com"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="分享"/>
+            <item
+                android:id="@+id/nav_send_com"
+                android:icon="@android:drawable/ic_menu_send"
+                android:title="发送"/>
+            <item
+                android:id="@+id/nav_searchFriend"
+                android:icon="@android:drawable/ic_menu_share"
+                android:title="查看好友"/>
+        </menu>
+    </item>
+
+</menu>

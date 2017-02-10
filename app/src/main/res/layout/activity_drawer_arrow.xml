@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <!-- Action-bar looking view -->
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_dimen"
+        android:background="@color/custom_green"
+        >
+
+        <ImageView
+            android:id="@+id/drawer_indicator"
+            android:layout_width="@dimen/actionbar_dimen"
+            android:layout_height="@dimen/actionbar_dimen"
+            android:layout_gravity="start"
+            android:background="@drawable/drawer_selector"
+            android:scaleType="centerInside"
+            />
+
+        <TextView
+            android:id="@+id/indicator_style"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/actionbar_dimen"
+            android:layout_gravity="end"
+            android:background="@drawable/drawer_selector"
+            android:gravity="center"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"
+            android:text="@string/title_activity_main"
+            android:textColor="@android:color/white"
+            android:textStyle="bold"
+            />
+
+    </FrameLayout>
+
+    <!-- 创建Navigation Drawer需要用DrawerLayout 作为界面根控件
+    注意这里的高度设置是1，表示占满剩余空间-->
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <!-- content -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/lv_drawerArrow_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical"
+                android:dividerHeight="3dp"
+                android:divider="@color/custom_bgcolor"
+                >
+
+            </ListView>
+        </LinearLayout>
+
+
+        <!--slide Drawer menu
+        标志是android:layout_gravity="start"，只要与代码中匹配，也可以是其他，如top..
+        -->
+        <LinearLayout
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:background="@android:color/white"
+            >
+            <!--<ImageView-->
+            <!--android:id="@+id/img_arrowMenu_user"-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="100dp"-->
+            <!--android:src="@drawable/avatar_default"-->
+            <!--android:clickable="true"-->
+            <!--/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_arrowMenu_username"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+            <!--android:text="@string/request_to_login"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:gravity="center"-->
+            <!--android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>-->
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="start"
+                android:fitsSystemWindows="true"
+                app:headerLayout="@layout/nav_header_main"
+                app:menu="@menu/menu_drawer"/>
+        </LinearLayout>
+
+
+    </android.support.v4.widget.DrawerLayout>
+
+</LinearLayout>
+
+
+
+
+
